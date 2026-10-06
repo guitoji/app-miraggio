@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f5f0" />
+  <title>Miraggio — perto de casa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#feed" aria-label="Miraggio início">
+        <span class="brand-mark"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M5 31V11l10 10 5-6 15 16H5Z"/><path d="M5 11 15 4l9 9"/></svg></span>
+        <span class="brand-name">miraggio<span>.</span><small>perto de casa</small></span>
+      </a>
+      <div class="community"><span class="community-dot"></span><span><b>Residencial Miraggio</b><small>Comunidade privada</small></span><span class="chevron">⌄</span></div>
+      <span class="nav-label">MENU</span>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <button class="nav-item active" data-screen="feed"><span class="nav-icon">⌂</span>Explorar</button>
+        <button class="nav-item" data-screen="preferences"><span class="nav-icon">☷</span>Preferências</button>
+        <button class="nav-item" data-screen="profile"><span class="nav-icon">♙</span>Meu perfil</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><div class="help-spark">✳</div><b>Feito para viver<br>mais perto.</b><p>Compre, venda e descubra o que acontece no seu condomínio.</p><button class="text-button" data-screen="feed">Conheça a ideia <span>↗</span></button></div>
+        <button class="mini-profile" data-screen="profile"><span class="avatar avatar-small">MC</span><span><b>Marina Costa</b><small>Bloco B · Ap. 304</small></span><span class="dots">•••</span></button>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar"><div class="mobile-brand"><span class="brand-mark"><svg viewBox="0 0 40 40"><path d="M5 31V11l10 10 5-6 15 16H5Z"/><path d="M5 11 15 4l9 9"/></svg></span>miraggio<span>.</span></div><div class="topbar-right"><span class="top-location"><span>⌖</span> Residencial Miraggio</span><button class="icon-button notification" aria-label="Notificações">♧<i></i></button><button class="avatar avatar-small top-avatar" data-screen="profile">MC</button></div></header>
+
+      <section id="screen-feed" class="screen active-screen">
+        <div class="page-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> SEU BAIRRO, MAIS PERTO</div><h1>O que tem de bom <em>por aqui?</em></h1><p class="intro">Descubra produtos feitos e compartilhados por quem mora pertinho de você.</p></div><button class="primary-button create-post" data-screen="login"><span>＋</span> Criar anúncio</button></div>
+        <div class="welcome-strip"><div class="welcome-icon">☀</div><div><b>Bom dia, Marina!</b><span>Um novo dia, novas descobertas no Miraggio.</span></div><span class="welcome-decoration">✳</span></div>
+        <div class="section-row"><div><h2>Explore por categoria</h2><p>Um jeitinho fácil de encontrar o que você procura.</p></div><button class="subtle-button" data-screen="preferences">Editar preferências <span>↗</span></button></div>
+        <div class="category-list" id="category-list"></div>
+        <div class="feed-toolbar"><div><h2>Novidades por aqui</h2><p>Coisas boas compartilhadas pelos seus vizinhos.</p></div><button class="sort-button">Mais recentes <span>⌄</span></button></div>
+        <div class="post-grid" id="post-grid"></div>
+        <footer class="feed-footer">Feito com carinho entre vizinhos <span>♥</span></footer>
+      </section>
+
+      <section id="screen-preferences" class="screen preferences-screen">
+        <div class="backline"><button class="back-button" data-screen="feed">← <span>Voltar ao feed</span></button><span class="step-label">PASSO 1 DE 2</span></div>
+        <div class="preferences-head"><span class="illustration-badge">✳</span><div class="eyebrow"><span class="eyebrow-line"></span> DO SEU JEITO</div><h1>O que faz seus olhos <em>brilharem?</em></h1><p>Escolha os assuntos que mais te interessam. Vamos deixar seu feed com a sua cara.</p></div>
+        <div class="preference-box"><div class="preference-box-head"><div><h2>Escolha suas categorias favoritas</h2><p>Pode escolher quantas quiser — e mudar depois, quando quiser.</p></div><span class="selection-count"><b id="selection-count">3</b> selecionadas</span></div><div class="preference-grid" id="preference-grid"></div><div class="preference-bottom"><span><span class="info-dot">i</span> Suas escolhas ajudam a organizar o feed.</span><button class="primary-button" data-screen="feed">Salvar preferências <span>→</span></button></div></div>
+        <p class="skip-line">Ainda não sabe? <button data-screen="feed">Tudo bem, escolher depois</button></p>
+      </section>
+
+      <section id="screen-profile" class="screen profile-screen">
+        <div class="profile-cover"><div class="cover-orbit orbit-one"></div><div class="cover-orbit orbit-two"></div><div class="cover-copy"><span class="eyebrow">SEU CANTINHO NO MIRAGGIO</span><h1>Um pouco sobre <em>você.</em></h1></div><span class="cover-flower">✳</span></div>
+        <div class="profile-content"><div class="profile-title-row"><span class="avatar profile-avatar">MC</span><button class="outline-button" data-screen="login">✎ &nbsp;Editar perfil</button></div><div class="profile-name"><h2>Marina Costa</h2><span class="member-badge">✦ Moradora</span></div><p class="profile-location">⌖ &nbsp;Bloco B, apartamento 304 <span>·</span> Morando aqui desde 2022</p><p class="profile-bio">Apaixonada por um café passado na hora, plantas e boas conversas com os vizinhos. 🌿</p>
+          <div class="profile-stats"><div><b>08</b><span>Anúncios publicados</span></div><div><b>4.9 <i>★</i></b><span>Avaliação da loja</span></div><div><b>12</b><span>Vizinhos seguindo</span></div></div>
+          <div class="profile-tabs"><button class="selected">Meus anúncios <span>08</span></button><button>Avaliações <span>06</span></button><button>Favoritos <span>04</span></button></div>
+          <div class="profile-listing-heading"><h3>Seus anúncios</h3><button class="subtle-button">Ver todos <span>↗</span></button></div><div class="post-grid profile-post-grid" id="profile-post-grid"></div>
+        </div>
+      </section>
+
+      <section id="screen-login" class="screen auth-screen"><div class="auth-art"><span class="auth-sun">✳</span><div class="auth-message"><span class="eyebrow">BOM TER VOCÊ POR AQUI</span><h1>As melhores coisas<br>acontecem <em>perto.</em></h1><p>Um lugar para descobrir, compartilhar e apoiar os talentos que moram ao seu lado.</p><div class="auth-neighbors"><span class="avatar avatar-small">LC</span><span class="avatar avatar-small">AF</span><span class="avatar avatar-small">BR</span><span>Uma comunidade feita por vizinhos, para vizinhos.</span></div></div><span class="auth-art-note">RESIDENCIAL MIRAGGIO &nbsp;·&nbsp; SUA COMUNIDADE</span></div><div class="auth-panel"><button class="auth-back" data-screen="feed">← Voltar ao início</button><div class="auth-form-wrap"><div class="eyebrow"><span class="eyebrow-line"></span> SUA COMUNIDADE TE ESPERA</div><h2 id="auth-title">Entre no <em>Miraggio.</em></h2><p class="auth-subtitle" id="auth-subtitle">Acesse sua conta ou crie uma nova para começar.</p><div class="auth-tabs"><button class="auth-tab selected" data-auth="login">Entrar</button><button class="auth-tab" data-auth="register">Criar conta</button></div><form id="auth-form" novalidate>
+        <div class="register-only"><div class="form-section-label">SEUS DADOS</div><label for="full-name">Nome completo</label><input id="full-name" name="name" autocomplete="name" placeholder="Como podemos te chamar?" />
+        <div class="form-two"><div><label for="cpf">CPF</label><input id="cpf" name="cpf" inputmode="numeric" autocomplete="off" placeholder="000.000.000-00" maxlength="14" /></div><div><label for="phone">Celular</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(00) 00000-0000" maxlength="15" /></div></div>
+        <div class="form-two"><div><label for="block">Bloco</label><input id="block" name="block" placeholder="Ex.: B" /></div><div><label for="apartment">Apartamento</label><input id="apartment" name="apartment" inputmode="numeric" placeholder="Ex.: 304" /></div></div>
+        <fieldset class="role-fieldset"><legend>Como quer participar?</legend><p>Você pode escolher mais de uma opção e mudar depois.</p><div class="role-options"><label class="role-option"><input type="checkbox" name="role" value="buyer" checked /><span class="role-check">✓</span><span><b>Comprar</b><small>Descobrir produtos dos vizinhos</small></span></label><label class="role-option"><input type="checkbox" name="role" value="seller" /><span class="role-check">✓</span><span><b>Vender</b><small>Publicar seus próprios anúncios</small></span></label></div></fieldset></div>
+        <div class="form-section-label login-only">ACESSO À SUA CONTA</div><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com" required />
+        <div class="password-label"><label for="password">Senha</label><button type="button" class="forgot-button login-only">Esqueceu a senha?</button></div><input id="password" name="password" type="password" autocomplete="current-password" placeholder="Sua senha" required />
+        <div class="register-only"><label for="password-confirm">Confirme sua senha</label><input id="password-confirm" name="passwordConfirm" type="password" autocomplete="new-password" placeholder="Digite a senha novamente" /><label class="consent"><input id="consent" type="checkbox" /> <span>Li e concordo com os <button type="button" class="inline-link">termos de uso</button> e a <button type="button" class="inline-link">política de privacidade</button>.</span></label></div>
+        <button class="primary-button auth-submit" type="submit">Entrar na comunidade <span>→</span></button></form><div class="secure-note"><span>♧</span> Seus dados pessoais ficam protegidos e não aparecem no perfil público.</div><p class="auth-terms login-only">Espaço exclusivo para moradores do Residencial Miraggio.</p></div></div></section>
+    </main>
+  </div>
+  <nav class="mobile-nav" aria-label="Navegação móvel"><button class="selected" data-screen="feed"><span>⌂</span>Explorar</button><button data-screen="preferences"><span>☷</span>Preferências</button><button data-screen="profile"><span>♙</span>Perfil</button></nav>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
